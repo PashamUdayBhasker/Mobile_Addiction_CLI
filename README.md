@@ -14,7 +14,7 @@ Provides an interactive CLI for real-time predictions
 
 🗂 Project Structure
 Mobile-Addiction-Prediction/
-│
+│\n
 ├── data/
 │   └── teen_phone_addiction_dataset.csv      # Dataset (CSV)
 │
@@ -56,22 +56,6 @@ Severe Addiction: > 70
 7️⃣ Select Best Model – automatically pick the model with highest R²
 8️⃣ Interactive CLI – enter user details → predict addiction score + category
 
-🚀 Installation & Run
-
-1. Clone the repo:
-
-git clone https://github.com/your-username/mobile-addiction-prediction.git
-cd mobile-addiction-prediction
-
-
-2. Install dependencies:
-
-pip install -r requirements.txt
-
-
-3. Run the CLI:
-
-python src/mobile_addiction_cli.py
 
 🖥 Example CLI Interaction
 === Mobile Addiction Prediction CLI ===
