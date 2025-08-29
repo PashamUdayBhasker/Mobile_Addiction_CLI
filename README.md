@@ -1,29 +1,38 @@
-📱 Mobile Addiction Prediction
-📝 Project Overview
+📱 Teen Mobile Addiction Prediction — Machine Learning Project
+📌 Project Overview
 
-This project predicts teen mobile phone addiction levels using machine learning.
-The dataset includes lifestyle, study habits, social interactions, and mental health factors.
-The goal is to classify addiction into Low / Moderate / Severe categories.
+This project predicts the addiction level of teenagers to mobile phones based on usage patterns, lifestyle, and social habits using Machine Learning.
+It demonstrates a complete pipeline: data loading, exploratory analysis, preprocessing, model training, evaluation, and an interactive CLI for real-time predictions.
+The addiction level is categorized as Low / Moderate / Severe for easy interpretation.
 
-⚡ Features
+📂 Project Structure
+📁 Mobile-Addiction-Prediction
+│── 📄 src/
+│    └── mobile_addiction_cli.py   # Main Python script with CLI
+│── 📁 data/
+│    └── teen_phone_addiction_dataset.csv  # Dataset (local)
+│── 📁 notebooks/
+│    └── exploration.ipynb         # Optional EDA notebook
+│── 📄 requirements.txt            # Dependencies
+│── 📄 README.md                   # Project documentation
 
-Exploratory Data Analysis (EDA) with charts & visualizations
+📊 Dataset Details
 
-Data preprocessing (categorical + numeric features)
+Features:
 
-Training multiple ML models:
+Age → Teenager’s age
 
-Linear Regression
+Daily_Usage_Hours → Average phone usage per day (hours)
 
-Random Forest Regressor
+Screen_Time_Before_Bed → Phone usage before sleeping (hours)
 
-Gradient Boosting Regressor
+Time_on_Social_Media → Time spent on social media daily (hours)
 
-Model evaluation (MSE & R²) and selection of the best model
+Other optional features: Sleep_Hours, Phone_Checks_Per_Day, Exercise_Hours, etc.
 
-Interactive Command Line Interface (CLI) for real-time predictions
+Target:
 
-Addiction score categorized into:
+Addiction_Level → Numeric score mapped to categories:
 
 Low Addiction
 
@@ -31,60 +40,29 @@ Moderate Addiction
 
 Severe Addiction
 
-📂 Dataset Columns
+⚙️ Workflow
 
-Important features used for prediction:
-
-Age
-
-Daily_Usage_Hours
-
-Sleep_Hours
-
-Screen_Time_Before_Bed
-
-Time_on_Social_Media
-
-Phone_Checks_Per_Day
-
-Addiction_Level (target variable)
-
-🗂️ GitHub Folder Structure
-mobile-addiction-prediction/
-│
-├── data/
-│   └── teen_phone_addiction_dataset.csv      # Dataset file
-│
-├── notebooks/
-│   └── exploration.ipynb                     # Optional notebook for EDA
-│
-├── src/
-│   └── mobile_addiction_cli.py              # Main Python script with CLI
-│
-├── requirements.txt                          # Python dependencies
-├── README.md                                 # This file
-└── .gitignore                                # Ignore unnecessary files (like __pycache__)
-
-🛠️ Installation & Setup
-
-Clone the repository:
-
-git clone https://github.com/your-username/mobile-addiction-prediction.git
-cd mobile-addiction-prediction
+1️⃣ Load & Inspect Data → check shape, missing values, basic statistics
+2️⃣ Exploratory Data Analysis (EDA) → distributions, correlations, scatter plots
+3️⃣ Preprocessing → handle categorical & numeric features
+4️⃣ Train-Test Split → 80-20 split for training and evaluation
+5️⃣ Train Models → Linear Regression, Random Forest, Gradient Boosting
+6️⃣ Evaluate Models → MSE & R² score to select the best model
+7️⃣ Select Best Model → highest R² chosen
+8️⃣ Interactive CLI → enter user data to predict addiction score and category
 
 
-Install dependencies:
+📦 Requirements
 
-pip install -r requirements.txt
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
 
 
-Place the dataset in the data/ folder.
+📈 Example CLI Output
 
-Run the CLI to predict addiction levels:
-
-python src/mobile_addiction_cli.py
-
-🎯 Example CLI Run
 === Mobile Addiction Prediction CLI ===
 Type 'quit' anytime to exit.
 
@@ -95,19 +73,3 @@ Enter Time on Social Media in hours (e.g. 3): 4
 
 Predicted Addiction Score: 72.50
 Category: Severe Addiction
-
-📊 Results
-
-Models compared: Linear Regression, Random Forest, Gradient Boosting
-
-Best model selected automatically based on R² score
-
-Prediction output: numeric score + category (Low / Moderate / Severe Addiction)
-
-🚀 Future Work
-
-Improve model using more features (e.g., mental health, parental control)
-
-Build a web interface for easier predictions
-
-Test with larger datasets for better accuracy
