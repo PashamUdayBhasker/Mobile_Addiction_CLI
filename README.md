@@ -54,11 +54,11 @@ Severe Addiction
 
 📦 Requirements
 
-numpy
-pandas
-matplotlib
-seaborn
-scikit-learn
+1.numpy
+2.pandas
+3.matplotlib
+4.seaborn
+5.scikit-learn
 
 
 📈 Example CLI Output
