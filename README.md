@@ -14,7 +14,7 @@ Provides an interactive CLI for real-time predictions
 
 🗂 Project Structure
 Mobile-Addiction-Prediction/
-│\n
+│
 ├── data/
 │   └── teen_phone_addiction_dataset.csv      # Dataset (CSV)
 │
